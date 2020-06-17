@@ -1,0 +1,16 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+        Console.WriteLine("Number attendees:");
+		int attendee = Convert.ToInt32(Console.ReadLine());
+		int income = 5*attendee;
+		double perfomancecost = 20+(0.50*Convert.ToDouble(attendee));
+		double profit = Convert.ToDouble(income)-perfomancecost;
+		Console.WriteLine("Income :"+income);
+		Console.WriteLine("Profit :"+profit);
+		Console.ReadLine();
+	}
+}
