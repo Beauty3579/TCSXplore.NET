@@ -1,0 +1,14 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+        Console.WriteLine("Number of hours worked:");
+		double h = Convert.ToDouble(Console.ReadLine());
+		double tax = 0.15*(h*12);
+		double p = (h*12)-tax;
+		Console.WriteLine("Net Pay:"+p);
+		Console.ReadLine();
+	}
+}
