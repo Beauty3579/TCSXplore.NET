@@ -1,0 +1,77 @@
+using System;
+// design a calculator
+
+
+namespace proj_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double N1 = Convert.ToDouble(Console.ReadLine());
+            double N2 = Convert.ToDouble(Console.ReadLine());
+
+            calculator c = new calculator();
+            double add = c.Addition(N1, N2);
+            double sub = c.Subtraction(N1, N2);
+            double mul = c.Multiplication(N1, N2);
+            double div = c.Division(N1, N2);
+            double mod = c.Modulus(N1, N2);
+
+            Console.WriteLine($"Additon = {add}");
+            Console.WriteLine($"Subtraction = {sub}");
+            Console.WriteLine($"Multiplication = {mul}");
+            Console.WriteLine($"Division = {div}");
+            Console.WriteLine($"Modulus = {mod}");
+            Console.ReadLine();
+
+        }
+    }
+
+    class calculator
+    {
+        // making private parametrs
+        private double N1;
+        private double N2;
+
+        // making public parameters
+        public double num1 { get { return N1; } set { N1 = value; } }
+        public double num2 { get { return N2; } set { N2 = value; } }
+
+        public double Addition(double n1, double n2)//adition method
+        {
+            num1 = n1;
+            num2 = n2;
+            return n1 + n2;
+        }
+
+        public double Subtraction(double n1, double n2)//subtraction method
+        {
+            num1 = n1;
+            num2 = n2;
+            return n1 - n2;
+        }
+
+        public double Multiplication(double n1, double n2)//multiplication method
+        {
+            num1 = n1;
+            num2 = n2;
+            return n1 * n2;
+        }
+
+        public double Division(double n1, double n2)//division method
+        {
+            num1 = n1;
+            num2 = n2;
+            return n1 / n2;
+        }
+
+        public double Modulus(double n1, double n2)//modulus method
+        {
+            num1 = n1;
+            num2 = n2;
+            return n1 % n2;
+        }
+
+    }
+}
